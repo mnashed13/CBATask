@@ -10,7 +10,7 @@ Please also note that the webdriver was put inside the project file, however was
 Takeaways from the task:
 
 I thought the task was very interesting, 
-I was trying to get that last bit work where i was trying to validate thte final part of the netbank login. however there was a problem trying to read the title due to that fact that login in page opens in a new page my logic that wrote in the automation script i think can only read wha was on the original tab. I would be very interested in any advice that you would be able to give. 
+I was trying to get that last bit work where i was trying to validate thte final part of the netbank login. However there was a problem trying to read the title due to that fact that the login in page opens in a new tab and the logic that I wrote in the automation script, I think can only read what was on the original tab. I would be very interested in any advice that you would be able to give me on that to try and get the test to work.  
 
 Thank you again for the challenge 
 Kind Regards 
