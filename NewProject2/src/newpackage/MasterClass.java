@@ -16,15 +16,14 @@ public class MasterClass {
 //    	System.setProperty("webdriver.gecko.driver","C:\\geckodriver.exe");
 //		WebDriver driver = new FirefoxDriver();
 		//comment the above 2 lines and uncomment below 2 lines to use Chrome
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\User\\Desktop\\ChromeDriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","chromedriver.exe");
 		
 //		I was unable to get the chrome driver to run whilst in the project file i did try and link it properly within the project folder.  
-//		System.setProperty("webdriver.chrome.driver","\\chromedriver.exe");
-
-		//		maximising the window
+//		System.setProperty("webdriver.chrome.driver","chromedriver2.exe"
+		//maximising the window
 		WebDriver driver = new ChromeDriver();
 		
-	  driver.manage().window().maximize();
+		driver.manage().window().maximize();
         String baseUrl = "https://www.commbank.com.au";
      
         String expectedTitle = "Personal banking including accounts, credit cards and home loans - CommBank";
@@ -70,12 +69,12 @@ public class MasterClass {
        driver.findElement(By.linkText("How it works")).equals(ActualLinkTitle4);
        System.out.println("Verifying Reload nowr titles worked"); 
        
-       
-       
-//       driver.findElement(By.linkText("Order online")).click();
-       driver.findElement(By.xpath("(//a[contains(text(),'NetBank')])[4]")).click();
+       System.out.println("Netbank Login start "); 
       
-        		  
+       
+       driver.findElement(By.linkText("Order online")).click();
+//       driver.findElement(By.xpath("(//a[contains(@href, 'https://www.my.commbank.com.au/netbank/PaymentHub/MakePayment.aspx')])[5]")).click();
+       System.out.println("Netbank Login Finished"); 
        
  
 // Verifying that you are on the login in page 
@@ -85,6 +84,8 @@ public class MasterClass {
        String expectedNetBankTitle = "NetBank - Log on to NetBank - Enjoy simple and secure online banking from Commonwealth Bank";
        String NetbankTitle = "";
        NetbankTitle = driver.getTitle();
+       System.out.println(NetbankTitle);
+     
        
        if (NetbankTitle.contentEquals(expectedNetBankTitle)){
            System.out.println("Test Passed! you are on the netbank login page");
